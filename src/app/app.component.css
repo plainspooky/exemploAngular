@@ -1,0 +1,13 @@
+.jumbotron-title {
+  background-image:url('https://farm6.staticflickr.com/5444/17795849369_449279d675_o_d.jpg');
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 0 0 px #000;
+}
+
+.jumbotron-title p {
+  font-size:125%
+}
