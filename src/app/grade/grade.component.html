@@ -1,0 +1,20 @@
+<div class="fluid-container">
+<h2>Notas da turma</h2>
+<table class='table table-striped'>
+  <thead>
+    <tr>
+      <th class="text-left">Aluno</th>
+      <th  class="text-center"*ngFor="let bimestre of bimestres;">{{ bimestre }} &ordm; bimestre</th>
+      <th  class="text-right">Média</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let aluno of alunos;">
+      <td class="text-left">{{ aluno.nome | uppercase }}</td>
+      <td class="text-center" *ngFor="let nota of aluno.notas;">{{ nota | number:'1.2-2' }}</td>
+      <td class="text-right">{{ getAverage(aluno.notas) | number:'1.2-2' }}</td>
+    </tr>
+  </tbody>
+</table>
+<small>Arquivo gerado automaticamente as {{ tempoAgora | date:'medium' }} </small>
+</div>
