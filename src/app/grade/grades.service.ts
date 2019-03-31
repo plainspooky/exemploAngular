@@ -1,4 +1,7 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+import { Grade } from './grade';
 
 @Injectable({
   providedIn: 'root'
@@ -6,11 +9,12 @@ import { Injectable } from '@angular/core';
 
 export class GradesService {
 
-  constructor() {
+  private gradesUrl = 'assets/grades.json';
+
+  constructor(private http: HttpClient) {
   }
 
- public getGrades () {
-   return [{nome:"Adão Nogueira",
-            notas:[9.89, 8.75, 6.34, 8.05]}]
- }
+  public getGrades() {
+    return this.http.get<Grade[]>(this.gradesUrl);
+  }
 }

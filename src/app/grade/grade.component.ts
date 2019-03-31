@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Grade } from './grade';
 import { GradesService } from './grades.service';
 
 @Component({
@@ -18,7 +19,12 @@ export class GradeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.alunos = this.gradesService.getGrades()
+    this.getGrades()
+  }
+
+  getGrades() {
+    this.gradesService.getGrades()
+      .subscribe((data: Grade[]) => this.alunos = data)
   }
 
   getAverage(gradeList) {
