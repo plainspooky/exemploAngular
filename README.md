@@ -1,27 +1,32 @@
 # ExemploAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.5.
+Este projeto foi gerado a partir do [Angular CLI](https://github.com/angular/angular-cli) version 7.3.5.
 
-## Development server
+## Instalação
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Clone este repositório e baixe as dependências do projeto com (você precisará ter tanto o **Node.js** quanto o **npm** instalados):
 
-## Code scaffolding
+``` shell
+cd exemploAngular
+npm install
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Acrescente o diretório dos programas ao _path_ com:
 
-## Build
+``` shell
+export PATH="$( npm bin ):$PATH"
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Servidor de desenvolvimento
 
-## Running unit tests
+Use:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+``` shell
+ng serve
+```
 
-## Running end-to-end tests
+Para executar o servidor de desenvolvimento, navegue nele com `http://localhost:4200/`. A aplicação será automaticamente recarregada caso ocorram alterações no código fonte.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Mais informações
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Para maiores detalhes visite as postagens [relacionadas](https://giovannireisnunes.wordpress.com/tag/angular/) no meu blog.
